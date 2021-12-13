@@ -33,7 +33,9 @@ router.post('/shorturl/', async (req, res) => {
       res.status(500).json('Server Error');
     }
   } else {
-    res.status(400).json({ error: 'invalid url' });
+    res.json({
+      "error": "invalid URL"
+    });
   }
 });
 
